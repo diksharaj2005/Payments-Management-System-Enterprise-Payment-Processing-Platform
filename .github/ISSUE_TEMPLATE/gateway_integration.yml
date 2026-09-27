@@ -1,0 +1,112 @@
+name: Gateway Integration Request
+description: Request integration with a new payment gateway provider
+title: "[Gateway]: "
+labels: ["gateway-integration", "enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requesting a new payment gateway integration? Please provide details about the gateway and your requirements.
+
+  - type: input
+    id: gateway-name
+    attributes:
+      label: Gateway Name
+      description: Name of the payment gateway
+      placeholder: "e.g., Razorpay, Stripe, PayU"
+    validations:
+      required: true
+
+  - type: input
+    id: gateway-url
+    attributes:
+      label: Gateway Documentation URL
+      description: Link to the official API documentation
+      placeholder: "https://docs.example.com/api"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: region
+    attributes:
+      label: Primary Region
+      description: What region is this gateway primarily used in?
+      options:
+        - India
+        - United States
+        - Europe
+        - Asia Pacific
+        - Global
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: payment-methods
+    attributes:
+      label: Supported Payment Methods
+      description: Which payment methods does this gateway support that you need?
+      options:
+        - label: UPI
+        - label: Credit/Debit Cards
+        - label: Net Banking
+        - label: Wallets
+        - label: Bank Transfers (NEFT/RTGS/IMPS)
+        - label: EMI
+        - label: Buy Now Pay Later (BNPL)
+        - label: International Cards
+        - label: Recurring Payments
+        - label: Refunds
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Describe your use case for this gateway integration
+      placeholder: "Why do you need this specific gateway? What problem does it solve?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is this integration for you?
+      options:
+        - Low - Exploring options
+        - Medium - Planning to use within 3-6 months
+        - High - Need within 1-3 months
+        - Critical - Blocking production deployment
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-features
+    attributes:
+      label: Required API Features
+      description: List specific API features you need from this gateway
+      placeholder: |
+        - Create payment
+        - Get payment status
+        - Refund payment
+        - Webhook callbacks
+        - ...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional information about the gateway or your requirements
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be able to help with this integration?
+      options:
+        - label: I have access to a test/sandbox account for this gateway
+        - label: I can provide test credentials (securely)
+        - label: I am willing to help implement this integration
+        - label: I can help with testing

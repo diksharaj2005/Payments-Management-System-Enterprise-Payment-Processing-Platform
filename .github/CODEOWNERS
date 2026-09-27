@@ -1,0 +1,32 @@
+# Default owners for everything in the repo
+* @ayushmaanbhav
+
+# Payment module owners
+/ayushmaanbhav-payment/ @ayushmaanbhav
+/ayushmaanbhav-payment-common/ @ayushmaanbhav
+
+# Ledger module owners
+/ayushmaanbhav-ledger/ @ayushmaanbhav
+/ayushmaanbhav-ledger-commons/ @ayushmaanbhav
+
+# Gateway provider owners
+/ayushmaanbhav-gateway-provider/ @ayushmaanbhav
+/ayushmaanbhav-gateway-provider-common/ @ayushmaanbhav
+/ayushmaanbhav-gateway-provider-setu/ @ayushmaanbhav
+
+# Infrastructure owners
+/ayushmaanbhav-database/ @ayushmaanbhav
+/.github/ @ayushmaanbhav
+
+# Commons and shared modules
+/ayushmaanbhav-commons/ @ayushmaanbhav
+/ayushmaanbhav-commons-spring/ @ayushmaanbhav
+
+# Event processing
+/ayushmaanbhav-event-processor/ @ayushmaanbhav
+
+# Idempotency
+/ayushmaanbhav-request-idempotency/ @ayushmaanbhav
+
+# Documentation
+*.md @ayushmaanbhav
